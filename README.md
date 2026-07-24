@@ -1,289 +1,259 @@
-# 💡 FinLens AI
-### Transparent Financial Readiness & Investment Education Platform
+# 💡 FinLens AI — Transparent Financial Readiness & Intelligent Scoring Engine
 
-> Helping underserved users understand their financial readiness through explainable AI and educational financial guidance.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688?logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B?logo=streamlit)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Random%20Forest-F7931E?logo=scikit-learn)
+![SHAP](https://img.shields.io/badge/Explainable%20AI-SHAP-brightgreen)
 
-![Status](https://img.shields.io/badge/Status-Hackathon-blue)
-![Python](https://img.shields.io/badge/Python-3.11-yellow)
-![React](https://img.shields.io/badge/React-19-61DAFB)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688)
-
----
-
-## 📖 Overview
-
-Millions of people actively participate in the digital economy but remain **credit invisible** due to the absence of traditional financial histories.
-
-**FinLens AI** is an explainable financial readiness platform that evaluates alternative financial behaviors and provides transparent financial wellness insights along with educational investment guidance.
-
-> ⚠️ **Disclaimer:** FinLens AI does **not** generate an official credit score and does **not** provide regulated investment advice. The platform is designed for educational and research purposes.
+> **Empowering alternative credit assessment through transparent digital-footprint analytics, explainable ML score breakdowns, and automated micro-investment gating.**
 
 ---
 
-## 🚀 Problem Statement
+## 🖥️ Platform Dashboard Preview
 
-Traditional financial systems face two major challenges:
-
-- Credit-invisible individuals struggle to access financial services.
-- First-time investors often lack personalized, easy-to-understand financial guidance.
-
-Existing systems are often:
-
-- Black-box AI models
-- Difficult to interpret
-- Focused only on lending decisions
-- Not beginner friendly
-
-FinLens AI focuses on **transparency, explainability, and financial literacy**.
+![FinLens AI Analytics Dashboard](assets/Dashboard.png)
 
 ---
 
-# ✨ Key Features
+## 🌟 Key Features
 
-### 📊 Financial Readiness Assessment
+### 1. 📊 Financial Readiness Index (FRI)
 
-Evaluate financial behavior through transparent scoring pillars.
+* Evaluates non-traditional daily digital footprints, including mobile recharge regularity, utility payment delay trends, e-commerce volume, and return ratios.
+* Generates a **Financial Readiness Index (FRI)** ranging from **0 to 100**.
+* Displays the score using a live, animated **Plotly Speedometer Gauge**.
 
-- Payment Discipline
-- Income Stability
-- Savings Behaviour
-- Expense Management
-- Emergency Preparedness
+### 2. 🔍 Explainable AI Engine (SHAP)
 
----
+* Addresses the "black-box" problem of traditional machine-learning credit scoring using **SHAP (SHapley Additive exPlanations)**.
+* Calculates the contribution of individual financial and behavioral features.
+* Displays a visual breakdown of positive **(+ points)** and negative **(- points)** score drivers.
+* Converts mathematical feature impacts into understandable, actionable feedback.
 
-### 🔍 Explainable AI
+### 3. 🎛️ Real-Time "What-If" Behavioral Simulator
 
-Every result includes:
+* Allows users to dynamically modify financial and digital habits using interactive UI sliders.
+* Recalculates model predictions in real time.
+* Demonstrates how changes in financial behavior could potentially improve the user's Financial Readiness Index.
 
-- Why the score was generated
-- Key contributing factors
-- Areas for improvement
-- Confidence level
+### 4. 🚧 Financial Readiness Gate
 
----
+* Applies a safety-first risk assessment before generating investment projections.
+* Flags potential financial risks such as:
 
-### 🧬 Financial DNA
+  * Active high-interest loans
+  * Insufficient emergency funds
+  * Inadequate financial buffers
+* Prevents investment suggestions when basic financial-readiness conditions are not satisfied.
 
-Generate a simple financial personality.
+### 5. 📈 Micro-Investment Scenario Projections
 
-Examples:
+* Generates interactive **1–5 year growth projections**.
+* Simulates three potential market scenarios:
 
-- Disciplined Saver
-- Growth Explorer
-- Cautious Planner
-- Income Builder
-
----
-
-### 🧭 Financial GPS
-
-Visual roadmap showing:
-
-Current Position
-
-↓
-
-Emergency Fund
-
-↓
-
-Investment Ready
-
-↓
-
-Long-Term Financial Wellness
+  * **Base Scenario**
+  * **Bull Scenario (+3%)**
+  * **Bear Scenario (-3%)**
+* Uses compound growth calculations to demonstrate possible long-term investment outcomes.
 
 ---
 
-### 💰 Educational Investment Guidance
+## 🏗️ System Architecture
 
-Category-level financial education.
-
-Examples:
-
-- Index Funds
-- Debt Funds
-- Government Securities
-- Gold ETFs
-
-No product recommendations.
+![FinLens AI System Architecture](assets/System_Architecture.png)
 
 ---
 
-### 🔄 What-if Simulator
+## 🛠️ Tech Stack
 
-Users can explore:
-
-- Increasing monthly savings
-- Reducing expenses
-- Building an emergency fund
-
-and instantly see how their Financial Readiness changes.
+| Category             | Technology                            |
+| -------------------- | ------------------------------------- |
+| **Language**         | Python 3.10+                          |
+| **Machine Learning** | Scikit-Learn, Random Forest Regressor |
+| **Explainable AI**   | SHAP, TreeExplainer                   |
+| **Data Processing**  | Pandas, NumPy                         |
+| **Model Storage**    | Joblib                                |
+| **Backend API**      | FastAPI, Uvicorn, Pydantic            |
+| **Frontend UI**      | Streamlit                             |
+| **Visualization**    | Plotly Graph Objects                  |
 
 ---
 
-# 🏗️ System Architecture
+## 🚀 Quick Start
+
+Follow these steps to run **FinLens AI** on your local environment.
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Luciifer71/FinLens-AI-Transparent-Financial-Readiness-Platform.git
+cd FinLens-AI-Transparent-Financial-Readiness-Platform
+```
+
+### Step 2: Install Dependencies
+
+```bash
+pip install pandas numpy scikit-learn shap joblib fastapi uvicorn pydantic streamlit requests plotly
+```
+
+### Step 3: Start the Backend API
+
+Run the following command:
+
+```bash
+uvicorn main:app --reload
+```
+
+The FastAPI backend should now be available at:
+
+* **Backend API:** `http://127.0.0.1:8000`
+* **Swagger Documentation:** `http://127.0.0.1:8000/docs`
+
+### Step 4: Launch the Streamlit Dashboard
+
+Open a **second terminal** in VS Code and run:
+
+```bash
+streamlit run app.py
+```
+
+The dashboard should open at:
+
+`http://localhost:8501`
+
+---
+
+## 🔌 API Endpoints
+
+| Method | Endpoint                  | Description                                                      |
+| ------ | ------------------------- | ---------------------------------------------------------------- |
+| `GET`  | `/`                       | API health check and platform metadata                           |
+| `GET`  | `/api/users`              | Fetch sample user profiles from the dataset                      |
+| `POST` | `/api/evaluate-readiness` | Calculate FRI score and generate SHAP explainability breakdown   |
+| `POST` | `/api/assess-risk`        | Evaluate financial readiness and generate investment projections |
+
+---
+
+## 📁 Project Structure
 
 ```text
-User
-      │
-      ▼
-Assessment
-      │
-      ▼
-Financial Readiness Engine
-      │
-      ▼
-Explainability Layer
-      │
-      ▼
-Financial Intelligence
-      │
-      ├── Financial DNA
-      ├── Financial GPS
-      ├── Recommendations
-      └── What-if Simulator
-```
-
----
-
-# 🖥️ MVP Workflow
-
-```
-Landing Page
-
-↓
-
-Assessment
-
-↓
-
-AI Analysis
-
-↓
-
-Dashboard
-
-↓
-
-Explainability
-
-↓
-
-Financial GPS
-
-↓
-
-Recommendations
-
-↓
-
-Simulator
-```
-
----
-
-# ⚙️ Tech Stack
-
-| Layer | Technology |
-|----------|-------------|
-| Frontend | React + Tailwind CSS |
-| UI Generation | v0.dev |
-| App Builder | Lovable |
-| Backend | FastAPI |
-| Hosting | Replit |
-| Data | Mock JSON / Synthetic Dataset |
-| AI | Rule-Based Logic (MVP) |
-| Documentation | Markdown |
-
----
-
-# 📂 Project Structure
-
-```
-FinLens-AI/
+FinLens-AI-Transparent-Financial-Readiness-Platform/
+│
+├── assets/
+│   ├── Dashboard.png                 # Streamlit dashboard preview 
+│   └── System_Architecture.png       # System architecture diagram
 
 │
-
-├── frontend/
-
-├── backend/
-
-├── components/
-
-├── pages/
-
-├── assets/
-
-├── public/
-
 ├── data/
-
-│   └── mockData.json
-
-├── docs/
-
-├── ppt/
-
-└── README.md
+│   ├── mockData.csv           # Dataset used for model training
+│   └── mockData.json          # User profiles used for API simulation
+│
+├── models/
+│   ├── credit_model.pkl       # Trained Random Forest model
+│   └── shap_explainer.pkl     # Pre-computed SHAP TreeExplainer
+│
+├── generate_data.py           # Synthetic data generation script
+├── train_model.py             # ML model training and SHAP engine
+├── main.py                    # FastAPI REST backend
+├── app.py                     # Streamlit analytics dashboard
+├── README.md                  # Project documentation
+└── .gitignore                 # Git ignore configuration
 ```
 
 ---
 
-# 🎯 Target Users
+## 🧠 How It Works
 
-- Students
-- Gig Workers
-- Small Merchants
-- First-time Investors
-- Informal Sector Workers
-- Tier-2 & Tier-3 City Users
+FinLens AI follows the following processing pipeline:
 
----
+**Digital Financial Footprints → Data Processing → ML Model → Financial Readiness Index → SHAP Explainability → Risk Gate → Investment Simulation**
 
-# 📅 Roadmap
+### 1. Digital Financial Footprints
 
-## MVP
+The system analyzes alternative financial indicators such as payment behavior, mobile recharge patterns, e-commerce activity, and other simulated digital financial signals.
 
-- [x] Landing Page
-- [x] Assessment
-- [x] Dashboard
-- [x] Explainability
-- [x] Financial GPS
-- [x] Recommendation Engine
-- [x] What-if Simulator
+### 2. Machine Learning Prediction
 
-## Future Development
+The processed features are passed into a **Random Forest Regressor**, which generates the user's Financial Readiness Index.
 
-- [ ] Alternative Data Integration
-- [ ] Account Aggregator Support
-- [ ] ML-based Scoring
-- [ ] SHAP Explainability
-- [ ] Fairness Testing
-- [ ] Monte Carlo Simulator
-- [ ] Deployment
-- [ ] Mobile App
+### 3. Explainable AI
+
+The **SHAP TreeExplainer** determines how individual features contributed positively or negatively to the generated score.
+
+### 4. Behavioral Simulation
+
+Users can modify financial behaviors using interactive controls and immediately observe how those changes affect their predicted score.
+
+### 5. Financial Readiness Assessment
+
+The system evaluates whether fundamental financial conditions are satisfied before proceeding to investment projections.
+
+### 6. Investment Projection
+
+Eligible users can explore potential **1–5 year investment outcomes** across Base, Bull, and Bear market scenarios.
 
 ---
 
-# 🔒 Responsible AI
+## 🎯 Project Objective
 
-FinLens AI follows responsible AI principles.
+Traditional credit-scoring systems rely heavily on formal credit histories. This can make financial assessment difficult for individuals with limited or no conventional credit records.
 
-- Explainability First
-- Transparency
-- Human-Centered Design
-- Educational Recommendations
-- Privacy by Design
-- Minimal Data Collection
+**FinLens AI explores an alternative approach to financial-readiness assessment.**
 
----
+Instead of generating an unexplained score, the platform focuses on transparency by helping users understand:
 
-# 📌 Project Status
-
-🚧 Prototype under development for Hackathon MVP.
+* **Why** they received their Financial Readiness Index
+* **Which factors** positively or negatively affected the score
+* **How** behavioral changes could potentially improve financial readiness
+* **Whether** basic financial conditions are satisfied before considering investments
 
 ---
 
-## ⭐ If you found this project interesting, consider giving it a star!
+## ⚠️ Disclaimer
+
+> **FinLens AI is an educational prototype and proof-of-concept.**
+
+The Financial Readiness Index, risk assessments, and investment projections generated by this application should **not** be interpreted as official credit scores, lending decisions, financial advice, or investment recommendations.
+
+A production financial system would require validated real-world datasets, regulatory compliance, model fairness testing, security controls, privacy safeguards, and professional financial oversight.
+
+---
+
+## 🔮 Future Improvements
+
+* Real-world financial API integration
+* Advanced behavioral feature engineering
+* Model fairness and bias evaluation
+* User authentication and profile management
+* Persistent database integration
+* Personalized financial-improvement recommendations
+* Advanced investment risk profiling
+* ML model monitoring and retraining
+* Cloud deployment
+* Scalable backend infrastructure
+
+---
+
+## 👨‍💻 Development
+
+FinLens AI demonstrates the intersection of:
+
+**FinTech × Machine Learning × Explainable AI × Financial Inclusion**
+
+The project focuses on developing a transparent and interpretable financial-readiness assessment platform using alternative financial indicators and explainable machine learning.
+
+---
+
+## ⭐ Support
+
+If you find this project useful or interesting, consider giving the repository a **⭐ Star**.
+
+Contributions, suggestions, and feedback are welcome.
+
+---
+
+<p align="center">
+  <strong>FinLens AI</strong><br>
+  Transparent Financial Readiness through Explainable AI
+</p>
